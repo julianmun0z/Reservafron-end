@@ -1,0 +1,101 @@
+<div class="container col-md-4">
+    <div class="card">
+        <div class="card-header">
+            <h3> Factura </h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <table class="table ">
+                <div class="">
+                        <th><label for="">Nº FACTURA:</label></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        
+                        <th><label >{{clientEntity.clientId}}</label></th>
+                </div>
+               
+                <div class="form-group">
+                    <th> <label>NOMBRE CLIENTE:</label></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    
+                    <th > <label style="margin-left: 10px">{{clientEntity.firstName}}
+                            {{clientEntity.lastName}}</label></th>
+                </div>
+                <div class="form-group">
+                    <th> <label for="">Email:</label></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th> <label style="margin-left: 10px">{{clientEntity.email}} </label></th>
+                </div>
+                <div class="form-group">
+                    <th> <label for="">NUMERO DE PERSONAS:</label></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th> <label style="margin-left: 10px">{{clientEntity.reservation.numberPeople}} </label></th>
+                </div>
+                <div class="form-group">
+                    <th> <label for="">FECHA DE LA RESERVA:</label></th>
+                    <th></th>
+                    <th></th>
+                    <th> <label
+                            style="margin-left: 10px">{{clientEntity.reservation.reservationDate |date:'dd/MM/yyyy'}}
+                        </label></th>
+                </div>
+                <div class="form-group">
+                    <th> <label for="">DIA RESERVA:</label></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    
+                    <th> <label style="margin-left: 10px">{{clientEntity.reservation.reservationDate |date:'EEEE'}}
+                        </label></th>
+                </div>
+
+                <div class="form-group">
+                    <th><label for="">Descuento por persona:</label></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><label style="margin-left: 10px">{{clientEntity.reservation.bill.discountForPeople}}</label>
+                    </th>
+                </div>
+                <div class="form-group">
+                    <th> <label for="">Descuento por día:</label></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th> <label style="margin-left: 10px">{{clientEntity.reservation.bill.discpuntForDays}}</label></th>
+                </div>
+                <div class="form-group">
+                    <th> <label for="">VALOR TOTAL:</label></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th> <label style="margin-left: 10px">{{clientEntity.reservation.bill.price}}</label></th>
+                </div>
+                <button (click)="Atras(clientEntity)" class="btn btn-primary btn-lg btn-block">Atras</button>
+            </table>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+clientEntity
